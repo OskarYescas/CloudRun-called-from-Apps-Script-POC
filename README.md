@@ -64,16 +64,7 @@ This project uses a **Zero-Trust Application-Layer Security** model.
     * Enable "Show 'appsscript.json' manifest file in editor".
     * **Script Properties:** Add a property named `CLOUD_RUN_URL` and paste your Cloud Run service URL.
 3.  **Update Manifest (`appsscript.json`):**
-    Ensure the following scopes are present to allow token passing and UI interaction:
-    ```json
-    "oauthScopes": [
-      "[https://www.googleapis.com/auth/script.external_request](https://www.googleapis.com/auth/script.external_request)",
-      "[https://www.googleapis.com/auth/drive](https://www.googleapis.com/auth/drive)",
-      "[https://www.googleapis.com/auth/spreadsheets](https://www.googleapis.com/auth/spreadsheets)",
-      "[https://www.googleapis.com/auth/userinfo.email](https://www.googleapis.com/auth/userinfo.email)",
-      "[https://www.googleapis.com/auth/script.container.ui](https://www.googleapis.com/auth/script.container.ui)"
-    ]
-    ```
+    Ensure the following scopes are present to allow token passing and UI interaction.
 4.  **Update Code (`Code.gs`):**
     Copy the provided Apps Script logic. This script handles the menu creation, token retrieval, and API signal.
 
